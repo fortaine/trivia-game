@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Character encoding -->
+    <meta charset="UTF-8" />
+    <!-- Viewport for responsiveness -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Descriptive title -->
+    <title>Trivia Game - Test Your Knowledge</title>
+    <!-- Meta description for SEO -->
+    <meta
+      name="description"
+      content="A fun trivia game to test your knowledge. Answer questions before the timer runs out!"
+    />
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Main container -->
+    <div class="container">
+      <h1>Trivia Game</h1>
+      <!-- High Score Display -->
+      <div id="high-score-container">
+        High Score: <span id="high-score">0</span>
+      </div>
+      <!-- Main content area -->
+      <main id="game">
+        <!-- Start Screen -->
+        <section id="start-container">
+          <!-- Difficulty Selection -->
+          <div class="selection">
+            <label for="difficulty">Select Difficulty:</label>
+            <select id="difficulty">
+              <option value="easy">Easy</option>
+              <option value="medium" selected>Medium</option>
+              <option value="hard">Hard</option>
+            </select>
+          </div>
+          <!-- Category Selection -->
+          <div class="selection">
+            <label for="category">Select Category:</label>
+            <select id="category">
+              <!-- Categories will be populated dynamically -->
+            </select>
+          </div>
+          <!-- Start Button -->
+          <button id="start-button" class="btn" type="button">
+            Start Game
+          </button>
+        </section>
+        <!-- Question Screen -->
+        <section id="question-container" class="hide">
+          <div id="question">Question text</div>
+          <div id="timer">Time Remaining: <span id="time">30</span>s</div>
+          <div id="answer-buttons" class="btn-grid">
+            <!-- Answer buttons will be dynamically added here -->
+          </div>
+        </section>
+        <!-- Result Screen -->
+        <section id="result-container" class="hide">
+          <div id="result">You answered correctly!</div>
+          <button id="next-button" class="btn" type="button">
+            Next Question
+          </button>
+        </section>
+        <!-- End Screen -->
+        <section id="end-container" class="hide">
+          <div id="final-score">You scored X out of 5!</div>
+          <button id="restart-button" class="btn" type="button">
+            Restart Game
+          </button>
+        </section>
+      </main>
+    </div>
+    <!-- Link to external JavaScript -->
+    <script src="script.js" defer></script>
+  </body>
+</html>
